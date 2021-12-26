@@ -1,0 +1,23 @@
+from sys import stdin
+
+import queue
+def checkRedundantBrackets(expression):
+    if (expression[0]=='(' and expression[2] == ')'):
+        return True
+    q=queue.LifoQueue()
+    temp=0
+    l=len(expression)
+    for i in range(l-1):
+        c=expression[i]
+        n=expression[i+1]
+        if c=='(' and n==')':
+            return True
+        if c=='(' and n=='(':
+            temp=2
+        if c==')' and n==')' and temp==2:
+            return True
+        
+    return False}
+    count = 0;  }
+    return false;
+}
